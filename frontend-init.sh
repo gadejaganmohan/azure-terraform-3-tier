@@ -88,27 +88,15 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        // Display success message
-        showPopup('User added successfully!', 'success');
+        // Show popup message
+        alert('User added successfully!');
     })
     .catch(error => {
         console.error('Error:', error);
-        // Display error message
-        showPopup('An error occurred while adding the user.', 'error');
+        // Show error message
+        alert('An error occurred while adding the user.');
     });
 });
-
-function showPopup(message, type) {
-    const popup = document.getElementById('popup');
-    popup.textContent = message;
-    popup.className = `popup ${type}`;
-    popup.style.display = 'block';
-
-    // Automatically hide popup after 3 seconds
-    setTimeout(() => {
-        popup.style.display = 'none';
-    }, 3000);
-}
 EOF
 
 sudo rm /var/www/html/index.nginx-debian.html
