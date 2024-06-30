@@ -13,7 +13,7 @@ cat <<EOF > /var/www/html/index.html
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My App</h1>
+    <h1>Add New User</h1>
     <form id="userForm">
        
         <label for="name">Name:</label>
